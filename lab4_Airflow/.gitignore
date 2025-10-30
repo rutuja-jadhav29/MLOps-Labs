@@ -1,0 +1,56 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# ---- Environment Variables ----
+.env
+*.env
+
+# ---- Airflow ----
+# Keep only one example log folder if you want to show pipeline output
+logs/*
+!logs/example_run/
+!logs/example_run/*.log
+
+# ---- Docker ----
+*.pid
+tmp/
+.dockerignore
+# Ignore any local volumes or cache files
+*.bak
+*.tmp
+
+# ---- Data Files ----
+# Keep your churn CSVs for demonstration but ignore other heavy/unnecessary data
+working_data/*.csv
+!working_data/churn_raw.csv
+!working_data/churn_processed.csv
+working_data/model/
+# Ignore any future data dump directories
+data/
+dataset/
+raw_data/
+
+# ---- IDE & OS Files ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ---- Logs (Generic) ----
+*.log
+
+# ---- Optional Virtual Environments ----
+.venv/
+venv/
+env/
+
+# ---- Misc ----
+*.bak
+*.tmp

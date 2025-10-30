@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  spring-boot-app:
+    build:
+      context: ./todo-backend
+      dockerfile: Dockerfile
+    container_name: spring-boot-app
+    ports:
+      - "8080:8080"
+
+  todo-frontend:
+    build:
+      context: ./todo-frontend
+      dockerfile: Dockerfile
+    container_name: todo-frontend
+    ports:
+      - "45000:5000"
+    depends_on:
+      - spring-boot-app
